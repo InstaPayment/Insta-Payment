@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insta Payments</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<style>
+.footer-dark {
+    padding: 50px 0;
+    color: #f0f9ff;
+    background-color: #282d32
+}
+
+.footer-dark h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-weight: bold;
+    font-size: 16px
+}
+
+.footer-dark ul {
+    padding: 0;
+    list-style: none;
+    line-height: 1.6;
+    font-size: 14px;
+    margin-bottom: 0
+}
+
+.footer-dark ul a {
+    color: inherit;
+    text-decoration: none;
+    opacity: 0.6
+}
+
+.footer-dark ul a:hover {
+    opacity: 0.8
+}
+
+@media (max-width:767px) {
+    .footer-dark .item:not(.social) {
+        text-align: center;
+        padding-bottom: 20px
+    }
+}
+
+.footer-dark .item.text {
+    margin-bottom: 36px
+}
+
+@media (max-width:767px) {
+    .footer-dark .item.text {
+        margin-bottom: 0
+    }
+}
+
+.footer-dark .item.text p {
+    opacity: 0.6;
+    margin-bottom: 0
+}
+
+.footer-dark .item.social {
+    text-align: center
+}
+
+@media (max-width:991px) {
+    .footer-dark .item.social {
+        text-align: center;
+        margin-top: 20px
+    }
+}
+
+.footer-dark .item.social>a {
+    font-size: 20px;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.4);
+    margin: 0 8px;
+    color: #fff;
+    opacity: 0.75
+}
+
+.footer-dark .item.social>a:hover {
+    opacity: 0.9
+}
+
+.footer-dark .copyright {
+    text-align: center;
+    padding-top: 24px;
+    opacity: 0.3;
+    font-size: 13px;
+    margin-bottom: 0
+}
+.develop{
+    color: blanchedalmond;
+    text-align: center;
+    
+}
+.packages{
+    text-align: center;
+    color: #0033AB;
+}
+.pricingTable{
+    color: #555;
+    background-color: #fff;
+    font-family: 'Outfit', sans-serif;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0,0,0,0.15);
+}
+.pricingTable .pricingTable-header{
+    color: #fff;
+    background: linear-gradient(to top right,#0033AB,#0033AB);
+    padding: 25px 20px 80px;
+    margin: 0 0 10px;
+    clip-path: polygon(0 0, 100% 0, 100% 70%, 0% 100%);
+}
+.pricingTable .title{
+    color: rgba(255,255,255,0.8);
+    font-size: 30px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin: 0 0 15px;
+}
+.pricingTable .price-value .amount{
+    font-size: 80px;
+    font-weight: 600;
+    line-height: 80px;
+    display: block;
+}
+.pricingTable .price-value .duration{
+    font-size: 19px;
+    font-weight: 200;
+    letter-spacing: 0.5px;
+    display: block;
+}
+.pricingTable .pricing-content{
+    padding: 0;
+    margin: 0 0 35px;
+    list-style: none;
+    display: inline-block;
+}
+.pricingTable .pricing-content li{
+    font-size: 18px;
+    line-height: 25px;
+    text-transform: capitalize;
+    line-height: 35px;
+    padding: 5px 0 0;
+}
+.pricingTable .pricing-content li:after{
+    content: '';
+    background: linear-gradient(to top right,#0033AB,#0033AB);
+    height: 2px;
+    width: 100%;
+    margin: 5px 0 0;
+    clear: both;
+    display: block;
+}
+.pricingTable .pricing-content li:last-child:after{ display: none; }
+.pricingTable .pricingTable-signup{
+    background: linear-gradient(to top right,#0033AB,#0033AB);
+    padding: 10px 10px 9px;
+}
+.pricingTable .pricingTable-signup a{
+    color: rgba(255,255,255,0.8);
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: all 0.3s ease 0s;
+}
+.pricingTable .pricingTable-signup a:hover{
+    color: #fff;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.4);
+}
+.pricingTable.pink .pricingTable-header,
+.pricingTable.pink .pricing-content li:after,
+.pricingTable.pink .pricingTable-signup{
+    background: linear-gradient(to top right,#f2a033,#f2a033);
+}
+.pricingTable.green .pricingTable-header,
+.pricingTable.green .pricing-content li:after,
+.pricingTable.green .pricingTable-signup{
+    background: linear-gradient(to top right,#f2a033,#f2a033);
+}
+@media only screen and (max-width: 990px){
+    .pricingTable{ margin: 0 0 40px; }
+    .demo{
+        text-align: center
+    }
+}</style>
+
+
+</head>
+<body>
+ <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="./index.html"><img src="./Assets/Insta Payment Logo.png" class="img-fluid" alt="Responsive image" height="50" width="170"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="mr-auto"></div>
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="./index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./about.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./contact.html">Contact Us</a>
+            </li>
+           
+          </ul>
+        </div>
+      </nav>
+
+ </header>
+    <main>
+
+<div class="container-fluid">
+    <img src="./Assets/Comming Soon Banner .jpg" class="img-fluid" alt="Responsive image">
+</div>
+<section>
+    <div class="container-fluid">
+        <img src="./Assets/coming soon with phone.jpg" class="img-fluid" alt="Responsive image">
+    </div>
+</section>
+<section class="packages">
+    <h2>Our Packages</h2>
+</section>
+<section>
+    <div class="demo">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="pricingTable">
+                        <div class="pricingTable-header">
+                            <h3 class="title">SILVER</h3>
+                            <div class="price-value">
+                                <span class="amount">₹999/-</span>
+                                <span class="duration">per year</span>
+                            </div>
+                        </div>
+                        <ul class="pricing-content">
+                            <li>E-Governance Service </li>
+                            <li>Printing Service </li>
+                            <li>PVC card printing</li>
+                            <li>Shop Act Registration</li>
+                            <li>Udyam Registration</li>
+                            <li>FSSAI Registration</li>
+                            <li>GST Registration</li>
+                            <li>Digital Signature Certificate (DSC)</li>
+                            <li>Cibil Report</li>
+                            <li>24x7 Supports</li>
+                        </ul>
+                        <div class="pricingTable-signup">
+                            <a href="#">Sign Up</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    
+                </div>
+                <div class="col-md-4">
+                    <div class="pricingTable pink">
+                        <div class="pricingTable-header">
+                            <h3 class="title">GOLD</h3>
+                            <div class="price-value">
+                                <span class="amount">₹1999/-</span>
+                                <span class="duration">per year</span>
+                            </div>
+                        </div>
+                        <ul class="pricing-content">
+                            <li>All Services</li>
+                            <li>Branding Kit</li>
+                            <li>24x7 Support</li>
+                           
+                        </ul>
+                        <div class="pricingTable-signup">
+                            <a href="#">Sign Up</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>         
+</section>
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="footer-dark">
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 item">
+                        <h3>Contact</h3>
+                        <ul>
+                            <li><a href="https://wa.me/message/PYQNKCSH4WMWI1">+91-9561-56-9561</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 item">
+                        <h3>Email</h3>
+                        <ul>
+                            <li><a href="#">instapaymentindia@gmail.com</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 item">
+                        <h3>Menu</h3>
+                        <ul>
+                            <li><a href="./index.html">Home</a></li>
+                            <li><a href="./about.html">About Us</a></li>
+                            <li><a href="./contact.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 item text">
+                        <h3>Address</h3>
+                        <p>Office No-2, Servey No-84, Johar Colony Near Johar School, Sillod-431112</p>
+                    </div>
+                    <div class="col item social"><a href="https://www.facebook.com/profile.php?id=100077990494031"><i class="fa fa-facebook"><img src="./Assets/facebook.png" alt="" width="25" height="25"></i></a><a href="https://twitter.com/insta_payment?t=NTODa5cts66gpESJH60rng&s=09"><i class="fa fa-twitter"><img src="./Assets/twitter.png" alt="" width="25" height="25"></i></a><a href="http://instagram.com/instapayment_2022"><i class="fa fa-instagram"><img src="./Assets/instagram.png" alt="" width="25" height="25"></i></a><a href="https://t.me/+2YYulf2ZQU0xMTll"><i class="fa fa-telegram"><img src="./Assets/telegram.png" alt="" width="25" height="25"></i></a><a href="https://wa.me/message/PYQNKCSH4WMWI1"><i class="fa fa-whatsapp"><img src="./Assets/whatsapp.png" alt="" width="25" height="25"></i></a></div>
+                </div>
+                <p class="copyright">INSTA PAYMENTS LLP. © 2022</p>
+                <a href="https://abdsoftwaretechnologies.in/"><p class="develop">DEVELOPED BY ABD SOFTWARE TECHNOLOGIES SILLOD</p>
+                </a>
+            </div>
+        </footer>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
